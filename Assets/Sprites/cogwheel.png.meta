@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 4d10b3fdd5224cd40a674d012ce99900
+guid: f8ac0aa74f02b48aeb07dd3ca4f261e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2723421647258022868
-    second: Factory Obstacle Spritesheet_0
+      213: 3977399900245731646
+    second: Cogwheel_%28Common%29_0
+  - first:
+      213: -5994382659062924991
+    second: Cogwheel_%28Common%29_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Factory Obstacle Spritesheet_0
+      name: Cogwheel_%28Common%29_0
       rect:
         serializedVersion: 2
-        x: 223
-        y: 1039
-        width: 786
-        height: 754
+        x: 1151
+        y: 1439
+        width: 1826
+        height: 1826
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2c839de076743ad0800000000000000
-      internalID: -2723421647258022868
+      spriteID: e3922d7d220923730800000000000000
+      internalID: 3977399900245731646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cogwheel_%28Common%29_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 3906
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149face2bbcafcca0800000000000000
+      internalID: -5994382659062924991
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Factory Obstacle Spritesheet_0: -2723421647258022868
+      Cogwheel_%28Common%29_0: 3977399900245731646
+      Cogwheel_%28Common%29_1: -5994382659062924991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
