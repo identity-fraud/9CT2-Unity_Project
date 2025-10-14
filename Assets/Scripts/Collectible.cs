@@ -18,7 +18,8 @@ public class Collectible : MonoBehaviour
 
     //If an Object with the tag 'Player' collides with the collectible, the collectible disappears.
     void OnTriggerEnter2D(Collider2D target){
-        if(target.gameObject.tag == "Player"){
+        if (target.gameObject.tag == "Player")
+        {
             Destroy(gameObject);
         }
     }
