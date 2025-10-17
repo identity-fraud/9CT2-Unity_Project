@@ -4,50 +4,47 @@ public class Dash : MonoBehaviour
 {
     public float speed = 20f;
     public float duration = 0.2f;
+    public Transform spriteTransform; // the child that flips
 
+    private Rigidbody2D rb;
     private bool isDashing = false;
     private float timer;
-    private Vector2 direction;
-    private Rigidbody2D rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+        if (spriteTransform == null)
+            Debug.LogWarning("Sprite Transform not assigned in Dash.cs!");
     }
 
     void Update()
     {
         if (isDashing)
         {
-            rb.linearVelocity = direction * speed;
-
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
                 isDashing = false;
                 rb.linearVelocity = Vector2.zero;
             }
-
-            return; 
+            return;
         }
 
-        // Dash Left (Q)
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
         {
-            StartDash(Vector2.left);
-        }
-
-        // Dash Right (E)
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StartDash(Vector2.right);
+            StartDash();
         }
     }
 
-    void StartDash(Vector2 dir)
+    void StartDash()
     {
+        if (spriteTransform == null)
+            return;
+
         isDashing = true;
-        direction = dir;
         timer = duration;
+
+        float facingDirection = Mathf.Sign(spriteTransform.localScale.x);
+        rb.linearVelocity = new Vector2(facingDirection * speed, 0f);
     }
 }
