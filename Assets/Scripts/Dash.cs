@@ -2,49 +2,32 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    public float speed = 20f;
-    public float duration = 0.2f;
-    public Transform spriteTransform; // the child that flips
+    private Vector3 facing = Vector3.right;
+    private PlayerController Controller;
+    private float time;
 
-    private Rigidbody2D rb;
-    private bool isDashing = false;
-    private float timer;
-
-    void Start()
+     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        if (spriteTransform == null)
-            Debug.LogWarning("Sprite Transform not assigned in Dash.cs!");
+        Controller = GetComponent<PlayerController>();
     }
 
     void Update()
     {
-        if (isDashing)
+        time = Time.deltaTime - 1;
+
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E))
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                isDashing = false;
-                rb.linearVelocity = Vector2.zero;
-            }
-            return;
+            transform.Translate(facing * 40 * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
+        if (Controller.moving.x == 1)
         {
-            StartDash();
+            facing = Vector3.right;
+        }
+        else if (Controller.moving.x == -1)
+        {
+            facing = Vector3.left;
         }
     }
 
-    void StartDash()
-    {
-        if (spriteTransform == null)
-            return;
-
-        isDashing = true;
-        timer = duration;
-
-        float facingDirection = Mathf.Sign(spriteTransform.localScale.x);
-        rb.linearVelocity = new Vector2(facingDirection * speed, 0f);
-    }
 }
