@@ -9,6 +9,7 @@ public class Dash : MonoBehaviour
     private float dashTimer;
     private float afterImageTimer;
 
+    private int ran;
     private Rigidbody2D rb;
 
     void Start()
@@ -19,6 +20,8 @@ public class Dash : MonoBehaviour
 
     void Update()
     {
+        ran = Random.Range(1,6);
+
         if (isDashing)
         {
             transform.Translate(facing * 40 * Time.deltaTime);
@@ -29,7 +32,7 @@ public class Dash : MonoBehaviour
 
             {
                 AfterImage();
-                afterImageTimer = 0.01f;
+                afterImageTimer = 0.02f; // clone frequency
             }
 
             if (dashTimer <= 0f)
@@ -65,12 +68,43 @@ public class Dash : MonoBehaviour
     }
     void AfterImage()
     {
-    GameObject clone = Instantiate(PlayerPrefab, transform.position, transform.rotation);
-    SpriteRenderer sr = clone.GetComponent<SpriteRenderer>();
-    if (sr != null)
-    {
-        sr.color = new Color(1f, 1f, 1f, 0.5f); // semi-transparent
-    }
-    Destroy(clone, 0.5f);
+        GameObject clone = Instantiate(PlayerPrefab, transform.position, transform.rotation);
+        SpriteRenderer sr = clone.GetComponent<SpriteRenderer>();
+        sr.color = new Color(1, 1, 1, 0.5f);
+
+        
+        
+        if (ran == 1)
+        {
+            sr.material.color = Color.red;
+
+        }
+
+        if (ran == 2)
+        {
+            sr.material.color = Color.blue;
+        }
+
+        if (ran == 3)
+        {
+            sr.material.color = Color.green;
+        }
+
+        if (ran == 4)
+        {
+            sr.material.color = Color.red;
+        }
+
+        if (ran == 5)
+        {
+            sr.material.color = Color.yellow;
+        }
+
+        if (ran == 6)
+        {
+            sr.material.color = Color.red;
+        }
+        
+        Destroy(clone, 0.5f);
     }
 }
