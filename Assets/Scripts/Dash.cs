@@ -6,11 +6,14 @@ public class Dash : MonoBehaviour
     private Vector3 facing = Vector3.right;
     private PlayerController controller;
     private bool isDashing = false;
-    private float dashTimer;
+    private float dashTimer; // Dash length not related to cooldown
     private float afterImageTimer;
 
+    private float cooldown = 1f;
+    private float nextDash = 0f;
     private int ran;
     private Rigidbody2D rb;
+
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class Dash : MonoBehaviour
 
         if (isDashing)
         {
+
             transform.Translate(facing * 40 * Time.deltaTime);
             dashTimer -= Time.deltaTime;
             afterImageTimer -= Time.deltaTime;
@@ -42,7 +46,7 @@ public class Dash : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
+        if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E)) && Time.time >= nextDash)
         {
             StartDash();
         }
@@ -64,6 +68,8 @@ public class Dash : MonoBehaviour
         rb.gravityScale = 0f;
         afterImageTimer = 0f;
         rb.linearVelocity = Vector2.zero;
+
+        nextDash = Time.time + cooldown;
 
     }
     void AfterImage()
@@ -92,7 +98,7 @@ public class Dash : MonoBehaviour
 
         if (ran == 4)
         {
-            sr.material.color = Color.red;
+            sr.material.color = Color.cyan;
         }
 
         if (ran == 5)
@@ -102,9 +108,9 @@ public class Dash : MonoBehaviour
 
         if (ran == 6)
         {
-            sr.material.color = Color.red;
+            sr.material.color = Color.magenta;
         }
         
-        Destroy(clone, 0.5f);
+        Destroy(clone, 0.2f);
     }
 }
