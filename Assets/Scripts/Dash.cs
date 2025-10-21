@@ -23,7 +23,7 @@ public class Dash : MonoBehaviour
 
     void Update()
     {
-        ran = Random.Range(1,6);
+        ran = Random.Range(1,7);
 
         if (isDashing)
         {
@@ -74,7 +74,11 @@ public class Dash : MonoBehaviour
     }
     void AfterImage()
     {
-        GameObject clone = Instantiate(PlayerPrefab, transform.position, transform.rotation);
+
+        Vector3 offset = new Vector3(0f, Random.Range(-0.1f, 0.1f), 0f);
+
+        GameObject clone = Instantiate(PlayerPrefab, transform.position + offset, transform.rotation);
+        clone.transform.localScale = new Vector3(facing.x, 1, 1);
         SpriteRenderer sr = clone.GetComponent<SpriteRenderer>();
         sr.color = new Color(1, 1, 1, 0.5f);
 
