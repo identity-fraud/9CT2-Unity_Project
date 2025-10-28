@@ -5,7 +5,7 @@
 To fulfill the need of entertainment through a game that has fun and repeatable gameplay that makes people come back to play every time.
 
 ### Problem Statement:
-Many games focus too much on graphics but present subpar and boring graphics, even the story is left out sometimes and gets rushed and ends up with some predictable storyline.
+Many games focus too much on graphics and end up presenting subpar and predictable storyline.
 
 ### Skill Development
 To gain the skill required to create this kind of game I will need to use the Unity game engine and learn how to use it through Mr Scott's Unity Course.
@@ -14,8 +14,8 @@ To gain the skill required to create this kind of game I will need to use the Un
 - Inputs: WASD/arrow keys for both right handed and left handed people, spacebar for people who are already used to jumping in 3D games and Q/E to allow more convenient dashing left/right
 - Processing: The game needs to process those inputs and move the character correspondently.
 - Outputs: Render and move the tiles/character
-- Transmission: Recommended specs: Windows 100000 Pro Enterprise, Radeon RX RTX 6070 Super X3D, Intel 
-- Storage: Save the characters last location
+- Transmission: Not much requirements for data transmission for general gameplay
+- Storage: Automatically save the characters last location
 
 ## Functional and Non-functional Requirements
 ### Functional:
