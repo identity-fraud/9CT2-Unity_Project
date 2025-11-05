@@ -77,3 +77,5 @@ Excessive gaming can lead to addiction and social isolation, our game will be no
 
 ## Cultural Awareness
 No hateful religous or cultural references are in this game (should).
+
+![PMI tables](https://github.com/identity-fraud/9CT2-Unity_Project/blob/3ce18dcce9aa9323aab131b97fdfea5d2b7c7795/PMI.png)
