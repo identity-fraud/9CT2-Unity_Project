@@ -46,7 +46,7 @@ public class Dash : MonoBehaviour
             }
         }
 
-        if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E)) && Time.time >= nextDash)
+        if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.LeftShift)) && Time.time >= nextDash)
         {
             StartDash();
         }

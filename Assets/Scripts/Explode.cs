@@ -1,43 +1,48 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Explode : MonoBehaviour
 {
+    private bool isDead = false;
     private BoxCollider2D playerCollider;
 
     void Start()
     {
-        // Get the CapsuleCollider2D component attached to the Player GameObject
         playerCollider = GetComponent<BoxCollider2D>();
     }
 
-    // This method is called when another Collider2D enters the trigger zone of this GameObject.
     void OnTriggerEnter2D(Collider2D target)
     {
-        // Check if the entering GameObject has the "Deadly" tag
-
-        if (target.gameObject.CompareTag("Deadly")){
-            
-            // Disable the CapsuleCollider2D on the Player to prevent further collisions
-            if (playerCollider != null){
-                playerCollider.enabled = false;
-            }
+        if (target.gameObject.CompareTag("Deadly"))
+        {
+            Die();
         }
     }
 
-    // This method is called when a collision with another Collider2D occurs.
     void OnCollisionEnter2D(Collision2D target)
     {
-        // Check if the colliding GameObject has the "Deadly" tag
-        if (target.gameObject.CompareTag("Deadly")){
-
-            // Disable the CapsuleCollider2D on the Player to prevent further collisions
-            if (playerCollider != null){
-                SceneManager.LoadScene("SplashScreen");
-
-            }
+        if (target.gameObject.CompareTag("Deadly"))
+        {
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        if (playerCollider != null)
+            playerCollider.enabled = false;
+
+        // Wait 1 second then reload current scene
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
