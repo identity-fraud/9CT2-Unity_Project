@@ -18433,13 +18433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba39385182d26a4eba34e4360be9e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  maxVelocity: {x: 18, y: 100}
-  jetSpeed: 5000
-  standing: 0
-  standingThreshold: 2
-  airSpeedMultiplier: 0.3
-  alive: {fileID: 0}
+  speed: 100
+  maxVelocity: {x: 100, y: 100}
+  jetSpeed: 30
+  standingThreshold: 0.5
+  airSpeedMultiplier: 1
 --- !u!114 &1014798440497477289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18675,8 +18673,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 3.8239188
+  m_UseAutoMass: 0
+  m_Mass: 1
   m_LinearDamping: 4
   m_AngularDamping: 0.005
   m_GravityScale: 5
@@ -18687,9 +18685,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &8069425424962273864
 GameObject:
