@@ -69,13 +69,17 @@ The game should be accessible to most except those who don't know or can't use a
 ### Privacy and Data Protection
 The game collects no data apart from game saves and will never send anything to any server. The game save specifically will be stored locally and while it may not be encrypted or secured in a way there is not much downside apart from losing the save by someone accessing your computer.
 
-## Fairness and Representation
+### Fairness and Representation
 The characters have no actual story or confirmed features, except for the main character having no limbs, and that this is character never speaks and the design is intended to be not offensive at all, and that everything else in the game is like just obstacles so while there is not much diversity it doesn't contain any stereotypes about race or gender.
 
-## Mental/Emotion Wellbeing
+### Mental/Emotion Wellbeing
 Excessive gaming can lead to addiction and social isolation, our game will be not THAT fun and addicting to that point, but rather rage inducing so that they don't play for too long (which may come with other issues)
 
-## Cultural Awareness
+### Cultural Awareness
 No hateful religous or cultural references are in this game (should).
 
+## PMI Tables
+
 ![PMI tables](https://github.com/identity-fraud/9CT2-Unity_Project/blob/3ce18dcce9aa9323aab131b97fdfea5d2b7c7795/PMI.png)
+
+## Flowcharts
