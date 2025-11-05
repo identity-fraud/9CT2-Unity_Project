@@ -63,7 +63,6 @@ Equity definition: The quality of being fair and just, especially in a way that 
 
 Accessibility definition: The quality of being able to be reached or entered.
 
-
 ### Accessibility
 The game should be accessible to most except those who don't know or can't use a keyboard and/or can't see the gameplay. Solution: Neuralink support possibly. The WASD layout is intended for people who are already used to the left hand keyboard experience but the arrow keys are stil available for people who have better right hand control, along with the spacebar to jump as an alternative to W/Up Arrow if you are already used to it like in many other games.
 
