@@ -36,7 +36,7 @@ public class Explode : MonoBehaviour
         if (playerCollider != null)
             playerCollider.enabled = false;
 
-        // Wait 1 second then reload current scene
+
         StartCoroutine(Respawn());
     }
 
