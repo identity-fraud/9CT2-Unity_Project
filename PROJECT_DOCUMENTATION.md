@@ -83,3 +83,52 @@ No hateful religous or cultural references are in this game (should).
 ![PMI tables](https://github.com/identity-fraud/9CT2-Unity_Project/blob/3ce18dcce9aa9323aab131b97fdfea5d2b7c7795/PMI.png)
 
 ## Flowcharts
+### Inputs:
+![Input Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/inputs_flowchart.png)
+
+Pseudocode:
+
+START (Inputs)
+INPUT keyboardInput
+IF keyboardInput == "W" or Space THEN
+    OUTPUT Character jumps (moves up)
+ELSEIF keyboardInput == "A" THEN
+    OUTPUT Character moves left
+ELSEIF keyboardInput == "D" THEN
+    OUTPUT Character moves right
+ELSEIF keyboardInput == "E" or "Q" or LeftShift THEN
+    OUTPUT Character dashes (moves quicker)
+END (Inputs)
+
+
+### UI:
+![UI Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/flowchart_UI.png)
+
+Pseudocode:
+
+START (UI)
+OUTPUT Splashscreen
+IF "PLAY" is Clicked THEN
+    OUTPUT Play game
+ELIF "QUIT" is Clicked THEN
+    OUTPUT Quit game
+END (UI)
+
+### Saves:
+![Saves Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/saves_flowcharts.png)
+
+Pseudocode:
+
+START (Saves)
+INPUT SceneManager
+IF Scene == Level_1 THEN
+    OUTPUT Load Level_1
+ELIF Scene == Level_2 THEN
+    OUTPUT Load Level_2
+ELIF Scene == Level_3 THEN 
+    OUTPUT Load Level_3 THEN
+ELIF Scene == Level_4 THEN
+    OUTPUT Load Level_4 THEN
+ELIF Scene == Level_5 THEN
+    OUTPUT Load Level_5
+END (Saves)
