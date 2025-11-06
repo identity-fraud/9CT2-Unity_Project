@@ -132,3 +132,6 @@ ELIF Scene == Level_4 THEN<br>
 ELIF Scene == Level_5 THEN<br>
     OUTPUT Load Level_5<br>
 END (Saves)<br>
+
+## Gantt Charts
+![Gantt Charts](https://github.com/identity-fraud/9CT2-Unity_Project/blob/a205d9adb2229f3af926b219b90c10f43308e7b3/gantt.png)
