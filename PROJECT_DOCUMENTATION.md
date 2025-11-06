@@ -87,51 +87,54 @@ No hateful religous or cultural references are in this game (should).
 ![Input Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/inputs_flowchart.png)
 
 Pseudocode:
-
-START (Inputs)<br>
-INPUT keyboardInput<br>
-IF keyboardInput == "W" or Space THEN<br>
-    OUTPUT Character jumps (moves up)<br>
-ELSEIF keyboardInput == "A" THEN<br>
-    OUTPUT Character moves left<br>
-ELSEIF keyboardInput == "D" THEN<br>
-    OUTPUT Character moves right<br>
-ELSEIF keyboardInput == "E" or "Q" or LeftShift THEN<br>
-    OUTPUT Character dashes (moves quicker)<br>
-END (Inputs)<br>
+```
+START (Inputs)
+INPUT keyboardInput
+IF keyboardInput == "W" or Space THEN
+    OUTPUT Character jumps (moves up)
+ELSEIF keyboardInput == "A" THEN
+    OUTPUT Character moves left
+ELSEIF keyboardInput == "D" THEN
+    OUTPUT Character moves right
+ELSEIF keyboardInput == "E" or "Q" or LeftShift THEN
+    OUTPUT Character dashes (moves quicker)
+END (Inputs)
+```
 
 
 ### UI:
 ![UI Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/flowchart_UI.png)
 
 Pseudocode:
-
-START (UI)<br>
-OUTPUT Splashscreen<br>
-IF "PLAY" is Clicked THEN<br>
-    OUTPUT Play game<br>
-ELIF "QUIT" is Clicked THEN<br>
-    OUTPUT Quit game<br>
-END (UI)<br>
+```
+START (UI)
+OUTPUT Splashscreen
+IF "PLAY" is Clicked THEN
+    OUTPUT Play game
+ELIF "QUIT" is Clicked THEN
+    OUTPUT Quit game
+END (UI)
+```
 
 ### Saves:
 ![Saves Flowchart](https://github.com/identity-fraud/9CT2-Unity_Project/blob/d7c9b1937f814b3813776cde63fe0070501c0abd/saves_flowcharts.png)
 
 Pseudocode:
-
-START (Saves)<br>
-INPUT SceneManager<br>
-IF Scene == Level_1 THEN<br>
-    OUTPUT Load Level_1<br>
-ELIF Scene == Level_2 THEN<br>
-    OUTPUT Load Level_2<br>
-ELIF Scene == Level_3 THEN<br>
-    OUTPUT Load Level_3 THEN<br>
-ELIF Scene == Level_4 THEN<br>
-    OUTPUT Load Level_4 THEN<br>
-ELIF Scene == Level_5 THEN<br>
-    OUTPUT Load Level_5<br>
-END (Saves)<br>
+```
+START (Saves)
+INPUT SceneManager
+IF Scene == Level_1 THEN
+    OUTPUT Load Level_1
+ELIF Scene == Level_2 THEN
+    OUTPUT Load Level_2
+ELIF Scene == Level_3 THEN
+    OUTPUT Load Level_3 THEN
+ELIF Scene == Level_4 THEN
+    OUTPUT Load Level_4 THEN
+ELIF Scene == Level_5 THEN
+    OUTPUT Load Level_5
+END (Saves)
+```
 
 ## Gantt Charts
 ![Gantt Charts](https://github.com/identity-fraud/9CT2-Unity_Project/blob/a205d9adb2229f3af926b219b90c10f43308e7b3/gantt.png)
