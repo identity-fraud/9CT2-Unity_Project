@@ -139,6 +139,13 @@ END (Saves)
 ### Whole Game Storyboard
 ![Whole Game Storyboard](https://github.com/identity-fraud/9CT2-Unity_Project/blob/ccb473755297af09626cc2add64401e384417a7d/entire_game.png)
 
+### Storyboard 1
+
+![Storyboard 1](https://github.com/identity-fraud/9CT2-Unity_Project/blob/9195438dbc6f206a4b6e0c183b3c106d39547785/storyboard1.png)
+
+### Storyboard 2
+![Storyboard 2](https://github.com/identity-fraud/9CT2-Unity_Project/blob/9195438dbc6f206a4b6e0c183b3c106d39547785/storyboard2.png)
 
 ## Gantt Charts
 ![Gantt Charts](https://github.com/identity-fraud/9CT2-Unity_Project/blob/a205d9adb2229f3af926b219b90c10f43308e7b3/gantt.png)
+
