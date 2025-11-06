@@ -135,6 +135,10 @@ ELIF Scene == Level_5 THEN
     OUTPUT Load Level_5
 END (Saves)
 ```
+## Storyboarding
+### Whole Game Storyboard
+![Whole Game Storyboard](https://github.com/identity-fraud/9CT2-Unity_Project/blob/ccb473755297af09626cc2add64401e384417a7d/entire_game.png)
+
 
 ## Gantt Charts
 ![Gantt Charts](https://github.com/identity-fraud/9CT2-Unity_Project/blob/a205d9adb2229f3af926b219b90c10f43308e7b3/gantt.png)
